@@ -8,7 +8,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'HelloWorld',
   setup() {
-    const msg = 'vue3 child'
+    const msg = '你们'
     return{
       msg
     }

@@ -1,12 +1,16 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router';
 
 
 
 
 let instance = null
 function render() {
-  instance = createApp(App).mount('#app')
+  instance = createApp(App)
+  instance
+    .use(router)
+    .mount('#app')
 }
 
 if(!window.__MICRO_WEB__){
