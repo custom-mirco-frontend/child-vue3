@@ -1,13 +1,25 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
+  <button @click="handleOther">vue3 点击跳转</button>
   <router-view></router-view>
 </template>
-
 <script>
-
-export default {
+import {defineComponent} from 'vue'
+import { useRouter } from 'vue-router'
+export default defineComponent({
   name: 'App',
-}
+  setup() {
+    const router = useRouter()
+    const handleOther = () => {
+      router.push({
+        path: '/vue-other'
+      })
+    }
+    return{
+      handleOther
+    }
+  }
+})
 </script>
 
 <style>
